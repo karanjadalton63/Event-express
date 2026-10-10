@@ -454,10 +454,27 @@ form small {
   }
 }
 .event-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 22px;
+display: grid;
+grid-template-columns: repeat(3, minmax(0, 1fr));
+gap: 22px;
+width: 100%;
+align-items: start;
 }
+
+@media (max-width: 768px) {
+.event-grid {
+grid-template-columns: repeat(2, minmax(0, 1fr));
+gap: 14px;
+}
+}
+
+@media (max-width: 480px) {
+.event-grid {
+grid-template-columns: repeat(2, minmax(0, 1fr));
+gap: 10px;
+}
+}
+
 
 .event-card {
   overflow: hidden;
